@@ -1,0 +1,16 @@
+﻿Name [units],Value,Reference,Notes
+,,,
+Positive core diffusivity [m2.s-1],[function]nmc811_diffusivity,,carried over Ghosh
+Positive shell diffusivity [m2.s-1],[function]nmc811_diffusivity_degraded,,carried over Ghosh
+Positive shell oxygen diffusivity [m2.s-1],1E-17,,carried over Ghosh
+Forward chemical reaction coefficient [m.s-1],0.8544E-11,,carried over Ghosh
+Reverse chemical reaction coefficient [m4.mol-1.s-1],1.732E-16,,carried over Ghosh
+Initial concentration in positive core [mol.m-3],49430.40,,x_p=0.9549 discharged x c_max_p (cell balance)
+Trapped lithium concentration in shell [mol.m-3],13976.55,,x_p=0.2700 charged x c_max_p (Ghosh Eq.8)
+Minimum concentration in positive core when fully charged [mol.m-3],13976.55,,x_p=0.2700 charged x c_max_p (cell balance)
+Minimum concentration in negative particle when fully discharged [mol.m-3],59.166,,c_n_bott floor = Ghosh 0.002 x c_max_n (characterized NE minimum - correct for subtracted-baseline role)
+Initial oxygen concentration in positive shell [mol.m-3],[function]initial_oxygen_concentration,,carried over Ghosh
+Constant oxygen concentration in particle core [mol.m-3],152193.21,,carried over Ghosh
+Initial phase boundary location [m],5.15e-6,,0.987 x R_p
+Threshold concentration for phase transition [mol.m-3],20706.00,,c*=0.4 x c_max_p (Ghosh physical threshold)
+Positive electrode shell resistivity [Ohm.m],0e5,Safari 2009,carried over Ghosh

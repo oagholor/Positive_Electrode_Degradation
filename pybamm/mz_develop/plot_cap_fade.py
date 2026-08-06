@@ -1,14 +1,14 @@
 #%%
-timescale = solution.timescale_eval
-time_in_sec = solution.cycles[0].t * timescale
+# timescale = solution.timescale_eval
+# time_in_sec = solution.cycles[0].t * timescale
 
-V_cell = solution.cycles[0]["Terminal voltage [V]"].entries
-I = solution.cycles[0]["Current [A]"].entries
-Q = solution.cycles[0]["Discharge capacity [A.h]"].entries
+# V_cell = solution.cycles[0]["Terminal voltage [V]"].entries
+# I = solution.cycles[0]["Current [A]"].entries
+# Q = solution.cycles[0]["Discharge capacity [A.h]"].entries
 
-#%%
-plt.figure(figsize=(8, 6))
-plt.plot(time_in_sec, V_cell_out_value, 'b-')
+# #%%
+# plt.figure(figsize=(8, 6))
+# plt.plot(time_in_sec, V_cell_out_value, 'b-')
 
 
 #%% loop to calculate discharge capacity of each cycle
@@ -20,7 +20,7 @@ for i in range(total_cycles):
     Q_dis_cyc = solution.cycles[i].steps[3]["Discharge capacity [A.h]"].entries
     Q_dis = Q_dis_cyc[-1] - Q_dis_cyc[0]
     Q_dis_cycles.append(Q_dis)
-    
+
 #%%
 plt.figure(figsize=(8, 6))
 # markerfacecolor

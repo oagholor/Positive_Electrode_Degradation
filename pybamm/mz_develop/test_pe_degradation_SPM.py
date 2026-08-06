@@ -8,7 +8,7 @@ import pybamm.mz_develop.output_module as outmod
 #%%
 model = pybamm.lithium_ion.SPM({"PE degradation": "yes"})
 #%
-param = pybamm.ParameterValues(chemistry=pybamm.parameter_sets.Zhuo2021)
+param = pybamm.ParameterValues(chemistry=pybamm.parameter_sets.ORegan2021_pe_deg)
 #%%
 experiment = pybamm.Experiment(
     [
@@ -22,7 +22,7 @@ experiment = pybamm.Experiment(
         )
     ] * 20,
     # need for case I
-    period="0.5 minute",  
+    period="0.5 minute",
 )
 
 sim = pybamm.Simulation(
@@ -37,7 +37,7 @@ solution = sim.solve(calc_esoh=False)
 
     #%%
 output_variables = outmod.output_variables_spm
-sim.plot(output_variables)  
+sim.plot(output_variables)
 
 #%%
 total_cycles = len(solution.cycles)
@@ -89,7 +89,7 @@ plt.legend()
 # new_model = model.set_initial_conditions_from(solution, inplace=False)
 # #%
 # new_sim = pybamm.Simulation(
-#     new_model, 
+#     new_model,
 #     experiment=experiment2,
 #     parameter_values=param,
 # )

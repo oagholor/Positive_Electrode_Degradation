@@ -256,6 +256,29 @@ ORegan2021 = {
     "citation": ["ORegan2021", "Chen2020"],
 }
 
+ORegan2021_pe_deg = {
+    "chemistry": "lithium_ion",
+    "cell": "LGM50_ORegan2021",
+    "negative electrode": "graphite_ORegan2021",
+    "separator": "separator_ORegan2021",
+    "positive electrode": "nmc_ORegan2021",
+    "electrolyte": "lipf6_EC_EMC_3_7_Landesfeind2019",
+    "experiment": "1C_discharge_from_full_ORegan2021",
+    "pe degradation": "ORegan2021_pe_deg",
+    "citation": ["ORegan2021", "Chen2020", "Ghosh2021"],
+}
+
+ORegan2021_pe_deg_v2 = {
+    "chemistry": "lithium_ion",
+    "cell": "LGM50_ORegan2021",
+    "negative electrode": "graphite_ORegan2021",
+    "separator": "separator_ORegan2021",
+    "positive electrode": "nmc_ORegan2021",
+    "electrolyte": "lipf6_EC_EMC_3_7_Landesfeind2019",
+    "experiment": "1C_discharge_from_full_ORegan2021",
+    "pe degradation": "ORegan2021_pe_deg_v2",
+    "citation": ["ORegan2021", "Chen2020", "Ghosh2021"],
+}
 #
 # Lead-acid
 #
