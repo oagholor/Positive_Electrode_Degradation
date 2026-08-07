@@ -279,6 +279,18 @@ ORegan2021_pe_deg_v2 = {
     "pe degradation": "ORegan2021_pe_deg_v2",
     "citation": ["ORegan2021", "Chen2020", "Ghosh2021"],
 }
+
+Chen2020_pe_deg = {
+    "chemistry": "lithium_ion",
+    "cell": "LGM50_Chen2020",
+    "negative electrode": "graphite_Chen2020",
+    "separator": "separator_Chen2020",
+    "positive electrode": "nmc_Chen2020",
+    "electrolyte": "lipf6_Nyman2008",
+    "experiment": "1C_discharge_from_full_Chen2020",
+    "pe degradation": "Chen2020_pe_deg",
+    "citation": ["Chen2020", "Ghosh2021"],
+}
 #
 # Lead-acid
 #

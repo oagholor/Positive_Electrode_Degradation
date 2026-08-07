@@ -8,7 +8,7 @@ import pybamm.mz_develop.output_module as outmod
 #%%
 model = pybamm.lithium_ion.SPM({"PE degradation": "yes"})
 #%
-param = pybamm.ParameterValues(chemistry=pybamm.parameter_sets.ORegan2021_pe_deg_v2)
+param = pybamm.ParameterValues(chemistry=pybamm.parameter_sets.Chen2020_pe_deg)
 #%%
 experiment = pybamm.Experiment(
     [
