@@ -48,7 +48,7 @@ for i, tp in enumerate(plot_times):
         color=color,
         label="shell" if i == 0 else ""
     )
-    
+
 # plt.ylim(0, 1.0)
 
 plt.xlabel("r", fontsize=16)

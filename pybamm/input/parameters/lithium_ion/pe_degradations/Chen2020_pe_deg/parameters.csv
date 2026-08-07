@@ -12,5 +12,5 @@ Minimum concentration in negative particle when fully discharged [mol.m-3],66.26
 Initial oxygen concentration in positive shell [mol.m-3],[function]initial_oxygen_concentration,,carried over Ghosh
 Constant oxygen concentration in particle core [mol.m-3],152193.21,,carried over Ghosh
 Initial phase boundary location [m],5.15e-6,,0.987 x R_p
-Threshold concentration for phase transition [mol.m-3],25241.60,,c*=0.4 x c_max_p
+Threshold concentration for phase transition [mol.m-3],35338.00,,c*=0.56 x c_max_p - tuned for clean trigger crossing (core dips 0.4942)
 Positive electrode shell resistivity [Ohm.m],0e5,Safari 2009,carried over Ghosh

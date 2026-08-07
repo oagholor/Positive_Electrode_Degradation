@@ -1,7 +1,7 @@
 #%%
 import pybamm
 import numpy as np
-# import os
+import os
 import matplotlib.pyplot as plt
 import pybamm.mz_develop.output_module as outmod
 
@@ -28,20 +28,31 @@ experiment = pybamm.Experiment(
 sim = pybamm.Simulation(
     model, experiment=experiment,
     parameter_values=param,
-    solver=pybamm.CasadiSolver(mode="safe", dt_max=600),
 )
 
 
 #%%
-try:
-    solution = sim.solve(calc_esoh=False)
-except pybamm.SolverError as e:
-    print("Solve stopped early:", e)
-    solution = sim.solution
+solution = sim.solve(calc_esoh=False)
 
 
     #%%
 output_variables = outmod.output_variables_spm
 sim.plot(output_variables)
 
+total_cycles = len(solution.cycles)
+cycle_numbers= np.arange(1, total_cycles+1)
+Q_dis_cycles = []
 
+for i in range (total_cycles):
+
+    Q_dis_cyc = solution.cycles[i].steps[3]["Discharge capacity [A.h]"].entries
+    Q_dis_cycles.append(Q_dis_cyc[-1] - Q_dis_cyc[0])
+
+
+os.makedirs("pybamm/mz_develop/output", exist_ok=True)
+np.save("Q_dis_cycles_Chen.npy", Q_dis_cycles)
+
+plt.figure(figsize=(8,6))
+plt.plot(cycle_numbers, Q_dis_cycles, '-o', mfc='none', label="Zhuo2021")
+plt.xlabel("Cycle number"); plt.ylabel("Discharge capacity [A.h]")
+plt.legend(); plt.show()
